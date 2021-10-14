@@ -10,12 +10,44 @@
     <h1>Contador HTML+CSS+JS</h1>
   </header>
   <main>
-    <p>0</p>
+    <p id="number">0</p>
   </main>
   <footer>
-    <button>menos</button>
-    <button>mais</button>
+    <button onclick="menos()">menos</button>
+    <button onclick="mais()">mais</button>
   </footer>
+  <script>
+    function menos() {
+      console.log("menos...")
+      // 1. pegar o valor atual
+      let number = parseInt(document.getElementById("number").innerText)
+      console.log("valor atual: ", number)
+
+      // 2. subtrair 1 ao valor atual
+      // number = number - 1
+      number--
+      console.log("novo valor: ", number)
+
+      // 3. Atualizar valor no DOM
+      document.getElementById("number").innerText = number
+    }
+
+    function mais() {
+      console.log("mais...")
+      // 1. pegar o valor atual
+      let number = parseInt(document.getElementById("number").innerText)
+      console.log("valor atual: ", number)
+
+      // 2. somar 1 ao valor atual
+      // number = number + 1
+      number++
+      console.log("novo valor: ", number)
+
+      // 3. Atualizar valor no DOM
+      document.getElementById("number").innerText = number
+
+    }
+  </script>
 </body>
 
 </html>
