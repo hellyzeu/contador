@@ -3,19 +3,43 @@
 
 <head>
   <title>Contador</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: darkblue;
+      border: 15px solid red;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  </style>
 </head>
 
 <body>
-  <header>
-    <h1>Contador HTML+CSS+JS</h1>
-  </header>
-  <main>
-    <p id="number">0</p>
-  </main>
-  <footer>
-    <button onclick="menos()">menos</button>
-    <button onclick="mais()">mais</button>
-  </footer>
+  <div class="container">
+    <header>
+      <h1>Contador</h1>
+      <h2>HTML+CSS+JS</h2>
+    </header>
+    <main>
+      <p id="number">0</p>
+    </main>
+    <footer>
+      <button onclick="menos()">menos</button>
+      <button onclick="mais()">mais</button>
+    </footer>
+  </div>
   <script>
     function menos() {
       console.log("menos...")
